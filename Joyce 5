@@ -1,0 +1,45 @@
+1.CALCULATION BUG, INCORRECT CONDITION
+Line 55: 
+if hour == 6 and minute >= 0 and minute <= 30: should be 
+if hour == 6 and minute >= 0 and minute <= 29:
+
+Line 57/58: 
+elif hour == 6 and minute >= 31 and minute <= 59:
+return 15 should be
+elif hour == 6 and minute >= 30 and minute <= 59:
+ return 13
+
+Line 63
+elif hour <= 8 and hour >= 14 and minute >= 30 and minute <= 59: should be
+elif hour == 8 and minute >= 30  and hour ==14 and minute <= 59:
+
+Line 67
+elif hour == 15 and minute >= 0 or minute == 18 and minute <= 59: should be
+elif hour == 15 and minute >= 30 and hour  == 16 and minute <= 59:
+
+
+2. interval_start IS NOT INITIALIZED CORRECTLY
+Line 30
+interval_start = dates_list[1] should be interval_start = dates_list[0] 
+# Start with the first element a = 50
+
+
+3. INCORRECT TOLL-FREE DATE CODE
+Line 49/50: The code returns 1 as the toll fee for toll-free dates, but it should return 0
+if TollCalculator.is_toll_free_date(date):
+return 1
+should be 
+if TollCalculator.is_toll_free_date(date): 
+return 0
+
+
+4. LABELLING ERROR
+Line 82-86
+In the is_toll_free_date method, using values like  val and anotherval  makes it more complicated, use instead  constants like date.weekday() and date.month. 
+Replace val == 7 with a == 5 and anotherval == 6 with b == 7.
+        
+    
+
+5. CONDITIONAL STATEMENT CONTEXT ERROR
+Line 67
+There is an incorrect use of “or“ in the conditional statement
