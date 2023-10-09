@@ -1,0 +1,5 @@
+#bugs
+#line 6 -input_file har inte fått motsvarandde self.input_file variabel
+#line 27 det finn inte deklatrerad dates_list- line 18 deklareras dates = []
+#line 30 kallar för dates_list som är inte deklarerat
+#line 33 loopar genom dates_list som är inte deklarerad
