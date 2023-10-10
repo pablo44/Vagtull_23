@@ -1,2 +1,2 @@
 # Description
-This is en assigment for the group 1- Joyce & Pawel 
+This is en assigment for the group 1- Udoka Joyce Nnaka & Pawel 
